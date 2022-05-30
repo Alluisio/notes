@@ -1,0 +1,25 @@
+server:
+  port: ${tomcat.port:8081}
+
+spring:
+  profiles:
+    active: dev
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: false
+    hibernate.ddl-auto: validate
+    show-sql: false
+
+  liquibase:
+    change-log: classpath:/db/master.xml
+    enabled: true
+    default-schema: public
+
+#jwt:
+#  header: Authorization
+#  header-prefix: Bearer
+#  app-name: ACCESS
+#  expires-in: 1
+#  mobile-expires-in: 365
+#  secret: DEVELOPER_DEVELOP

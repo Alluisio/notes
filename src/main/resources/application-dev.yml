@@ -1,0 +1,18 @@
+## Spring DATASOURCE CONFIGURATIONS
+
+spring:
+  profiles:
+    group:
+      <group>: dev
+
+  #  base-frontend-url: http://localhost:3000/
+
+  datasource:
+    url: jdbc:postgresql://${postgres.hostname:localhost}:${postgres.port:5432}/${postgres.dbname:notes}
+    driverClassName: org.postgresql.Driver
+    username: ${postgres.user:postgres}
+    password: ${postgres.password:postgres}
+
+  sql:
+    init:
+      platform: postgres
