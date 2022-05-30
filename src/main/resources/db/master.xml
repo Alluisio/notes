@@ -3,5 +3,8 @@
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
+    <changeSet id="202205292135" author="alluisio.silva" dbms="PostgreSQL">
+        <sqlFile path="changelog/202205292135_criando_schema_note.sql" relativeToChangelogFile="true"/>
+    </changeSet>
 
 </databaseChangeLog>
